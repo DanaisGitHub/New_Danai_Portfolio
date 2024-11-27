@@ -52,13 +52,12 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     return (
         <MaxWidthWrapper className='prose dark:prose-invert'>
             <div className='flex'>
-                <div className='px-16'>
-                    <h1 className='text-fuchsia-950 text-4xl text-center'>{data.title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+                <div className='px-16 bg-slate-700 border-2 border-red-600 container'>
+                    <h1 className=" markdown-content" >{data.title}</h1>
+                    <div className="markdown-content" dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
                 </div>
-                <Onthispage className="text-sm w-[50%]" htmlContent={htmlContent} />
+                <Onthispage className="text-sm w-[50%] markdown-content text-red-600" htmlContent={htmlContent} />
             </div>
-
         </MaxWidthWrapper>
     )
 }

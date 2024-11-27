@@ -3,6 +3,7 @@ title: C++ Programming Tutorial
 slug: cpp-programming-tutorial
 description: Comprehensive guide on learning C++ programming from basics to advanced topics.
 imageUrl: /images/cpp.png
+lables: [a,b,c,d,e,f,g]
 ---
 
 # C++ Programming Tutorial: A Comprehensive Guide

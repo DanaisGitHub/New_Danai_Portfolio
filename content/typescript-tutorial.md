@@ -2,6 +2,7 @@
 title: TypeScript Tutorial
 slug: typescript-tutorial
 description: Comprehensive guide on learning TypeScript from basics to advanced topics.  
+lables: [a,b,c,d,e,f,g]
 ---
 
 # Introduction to TypeScript

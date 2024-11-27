@@ -3,6 +3,7 @@ title: CSS Tutorial
 slug: css-tutorial
 description: Comprehensive guide on learning CSS, from styling basics to advanced techniques like Flexbox, Grid, and animations.
 imageUrl: https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+lables: [a,b,c,d,e,f,g]
 ---
 
 # CSS Tutorial: A Comprehensive Guide

@@ -1,98 +1,154 @@
-/* markdown.css */
+/* General Styles for Markdown Content */
+.markdown-content {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+}
 
-/* General body styling */
+/* Light/Dark Mode Variables */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --link-color: #1e90ff;
+  --blockquote-bg: #1e293b;
+  --blockquote-border: #4f8ef7;
+}
+
+/* Apply Variables to Body */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 1rem;
-  }
-  
-  /* Headings */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: #2d2d2d;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #0070f3;
-    padding-bottom: 0.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: #0056b3;
-  }
-  
-  h3 {
-    font-size: 1.75rem;
-    color: #003d80;
-  }
-  
-  h4, h5, h6 {
-    font-size: 1.5rem;
-    color: #1a1a1a;
-  }
-  
-  /* Paragraphs */
-  p {
-    margin: 1rem 0;
-  }
-  
-  /* Lists */
-  ul, ol {
-    margin: 1rem 0 1rem 1.5rem;
-    padding: 0;
-  }
-  
-  ul li {
-    list-style: disc;
-  }
-  
-  ol li {
-    list-style: decimal;
-  }
-  
-  /* Blockquotes */
-  blockquote {
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
-    border-left: 5px solid #0070f3;
-    background-color: #f1f8ff;
-    color: #555;
-    font-style: italic;
-  }
-  
-  /* Code Blocks */
-  code {
-    background: #f5f5f5;
-    color: #d14;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  /* Links */
-  a {
-    color: #0070f3;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Images */
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-  
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Headings */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--heading-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.markdown-content h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--link-color);
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.75rem;
+}
+
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-size: 1.5rem;
+}
+
+/* Paragraphs */
+.markdown-content p {
+  margin: 1rem 0;
+}
+
+/* Lists */
+.markdown-content ul,
+.markdown-content ol {
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.markdown-content ul li {
+  list-style: disc;
+}
+
+.markdown-content ol li {
+  list-style: decimal;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid var(--blockquote-border);
+  background-color: var(--blockquote-bg);
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Links */
+.markdown-content a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Preformatted Text and Code Blocks */
+.markdown-content pre {
+  background-color: #2d2d2d;
+  color: #ff2525;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  counter-reset: line;
+}
+
+/* Code Block Line Numbers */
+.markdown-content code>[data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+.markdown-content [data-highlighted-line] {
+  background: #c8c8ff1a;
+  border-left: 4px solid #0070f3;
+}
+
+.markdown-content code[data-line-numbers-max-digits="2"]>[data-line]::before {
+  width: 2rem;
+}
+
+.markdown-content code[data-line-numbers-max-digits="3"]>[data-line]::before {
+  width: 3rem;
+}
+
+.markdown-content [data-highlighted-line] {
+  background: #c8c8ff1a;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+.markdown-content [data-highlighted-chars] {
+  background-color: rgb(160, 160, 144);
+}
+
+;

@@ -2,6 +2,7 @@
 title: JavaScript Tutorial
 slug: js-tutorial
 description: Comprehensive guide on learning JavaScript from basics to advanced topics.  
+lables: [a,b,c,d,e,f,g]
 ---
 
 

@@ -5,31 +5,37 @@ import fs, { readFileSync } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import { Metadata } from "next";
+import ProjectCard from '@/components/project-card'
 
-interface BlogType {
+type ProjectPrevType = {
     slug: string;
     title: string;
     description: string;
     imageUrl?: string;
+    labels?: Array<string>
 
 };
 
+// reads all files in content
 const dirContent = fs.readdirSync("content", "utf-8")
 console.log(dirContent)
 
-const blogs: BlogType[] = dirContent.map(file => {
-    const fileContent = readFileSync(`content/${file}`, "utf-8");
+// reads all file 
+const projects: ProjectPrevType[] = dirContent.map(file => {
+    const fileContent = readFileSync(`content/${file}`, "utf-8"); //TURN ASYNC
     const { data } = matter(fileContent)
-    const value: BlogType = {
+    console.log(data)
+    const value: ProjectPrevType = {
         slug: data.slug,
         title: data.title,
         description: data.description,
-        imageUrl: data?.imageUrl
+        imageUrl: data?.imageUrl,
+        labels: data?.labels
     }
     return value
 })
 
-console.log(blogs)
+console.log(projects)
 
 
 const BlogList = () => {
@@ -37,7 +43,7 @@ const BlogList = () => {
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold mb-6 text-center my-2">Our Blogs</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {blogs.map((blog: BlogType, index: number) => (
+                {projects.map((blog: ProjectPrevType, index: number) => (
                     <div
                         key={index}
                         className="shadow-lg rounded-lg overflow-hidden"
@@ -63,6 +69,8 @@ const BlogList = () => {
         </div>
     );
 };
+
+
 
 export const metadata: Metadata = {
     title: 'Blogs - ProgrammingWithHarry',
