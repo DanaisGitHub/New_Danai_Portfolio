@@ -65,13 +65,13 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
     // read route params 
-    const { slug } = params
-    const awaitedSlug = await slug
+    const awaitedP = await params
+    const awaitedSlug = await awaitedP.slug
     const filePath = `content/${awaitedSlug}.md`
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent)
     return {
-        title: `${data.title} - ProgrammingWithHarry`,
+        title: `${data.title} - Danai's Project`,
         description: data.description
     }
 

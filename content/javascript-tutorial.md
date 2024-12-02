@@ -2,7 +2,7 @@
 title: JavaScript Tutorial
 slug: javascript-tutorial
 description: Comprehensive guide on learning JavaScript, from the basics of syntax and functions to advanced topics like asynchronous programming and frameworks.
-lables: [a,b,c,d,e,f,g]
+labels: [a,b,c,d,e,f,g]
 ---
 
 # JavaScript Tutorial: A Comprehensive Guide

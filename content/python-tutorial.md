@@ -2,7 +2,7 @@
 title: Python Tutorial
 slug: python-tutorial
 description: Comprehensive guide on learning Python from basics to advanced topics.
-lables: [a,b,c,d,e,f,g]
+labels: [a,b,c,d,e,f,g]
 ---
 
 # Python Tutorial: A Comprehensive Guide
