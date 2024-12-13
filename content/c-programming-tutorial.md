@@ -10,6 +10,7 @@ labels: [a,b,c,d,e,f,g]
 
 Welcome to this comprehensive C programming tutorial! Whether you're a complete beginner or looking to deepen your understanding of C, this guide will take you through the fundamentals and introduce advanced concepts as you progress.
 
+$$\sum_{hello} $$
 ## Introduction to C
 
 C is a powerful general-purpose programming language that is widely used in system programming, embedded systems, and applications requiring high performance. It is known for its efficiency, close-to-hardware control, and portability, making it a crucial language in the software industry.

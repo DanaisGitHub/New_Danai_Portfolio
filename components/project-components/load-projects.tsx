@@ -40,7 +40,7 @@ console.log(projects)
 
 const BlogList = () => {
   return (
-    <div className="flex flex-wrap  justify-evenly">
+    <div className="flex flex-wrap justify-around min-w-full ">
       {projects.map((project, index) => (
         <React.Fragment key={index}>
           <ProjectCard {...project} />

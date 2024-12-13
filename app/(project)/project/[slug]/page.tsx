@@ -14,12 +14,18 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { rehypePrettyCode } from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { Metadata, ResolvingMetadata } from 'next'
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import { Cover } from '@/components/ui/cover'
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css'; // Import KaTeX CSS
 
+import '../../../globals.css'
 import './MdStyles.css'
 
 type Props = {
-    params: { slug: Promise<string>, title: string, description: string }
-    searchParams: { [key: string]: string | string[] | undefined }
+    params: Promise<{ slug: string, title: string, description: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }> // defines anything as params
 }
 
 // https://ondrejsevcik.com/blog/building-perfect-markdown-processor-for-my-blog
@@ -29,6 +35,8 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     const processor = unified()
         .use(remarkParse)
         .use(remarkRehype)
+        .use(rehypeKatex) 
+        .use(remarkMath) 
         .use(rehypeStringify)
         .use(rehypeSlug)
         .use(rehypePrettyCode, {
@@ -47,27 +55,30 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     const filePath = `content/${param.slug}.md`
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent)
-
     const htmlContent = (await processor.process(content)).toString()
     return (
-        <MaxWidthWrapper className='prose dark:prose-invert'>
-            <div className='flex'>
-                <div className='px-16 bg-slate-700 border-2 border-red-600 container'>
-                    <h1 className=" markdown-content" >{data.title}</h1>
-                    <div className="markdown-content" dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+        <TracingBeam className="px-6">
+            <MaxWidthWrapper className='dark:prose-invert pb-7 '>
+                <div className='flex '>
+                    <div className='px-16 w-full '>
+                        <h1 className=" markdown-content text-center font-extrabold text-5xl max-sm:text-4xl pb-7" >
+                            <Cover>{data.title}</Cover>
+                        </h1>
+                        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+                    </div>
+                    {/* <Onthispage className="markdown-content container  overflow-clip" htmlContent={htmlContent} /> */}
                 </div>
-                <Onthispage className="text-sm w-[50%] markdown-content text-red-600" htmlContent={htmlContent} />
-            </div>
-        </MaxWidthWrapper>
+            </MaxWidthWrapper>
+        </TracingBeam>
+
     )
 }
 
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
     // read route params 
-    const awaitedP = await params
-    const awaitedSlug = await awaitedP.slug
-    const filePath = `content/${awaitedSlug}.md`
+    const {slug} = await params
+    const filePath = `content/${slug}.md`
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent)
     return {

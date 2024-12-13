@@ -18,11 +18,10 @@ type ThemeContextType = {
 
 export default function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const theme: Theme = 'dark'
-  useEffect(() => {
     // Always apply dark mode
-    window.localStorage.setItem("theme", "dark");
-    document.documentElement.classList.add("dark");
-  }, []);
+    // window.localStorage.setItem("theme", "dark");
+    // document.documentElement.classList.add("dark");
+
 
   //@ts-ignore
   return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;

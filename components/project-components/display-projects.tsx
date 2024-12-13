@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "../section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -15,11 +15,14 @@ export default function Projects({ children }: any) {
     const refs = useRef<HTMLDivElement>(null);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+    useEffect(()=>{
+
+    })
+
     return (
-        
-        <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+        <section ref={refs} id="projects" className="scroll-mt-28 mb-28 ">
             <SectionHeading>My projects</SectionHeading>
-            <div className="flex flex-wrap  justify-evenly">
+            <div ref= {refs} className="flex">
                 {children}
             </div>
         </section>
