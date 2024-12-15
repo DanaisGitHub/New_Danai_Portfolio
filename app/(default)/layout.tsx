@@ -32,8 +32,8 @@ export default function RootLayout({
         <ShootingStars className="-z-50" />
 
 
-        <div className=" absolute top-[-6rem] right-[11rem] -z-50 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-[#94626382]"></div>
-        <div className=" absolute top-[-1rem] left-[-35rem] -z-50 h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-[#676394aa]"></div>
+        <div className=" absolute top-[-6rem] right-[11rem] max-w-screen-xl -z-50 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-[#94626382]"></div>
+        <div className=" absolute top-[-1rem] left-[-35rem] max-w-screen-xl -z-50 h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-[#676394aa]"></div>
         
         <ThemeContextProvider>
           <ActiveSectionContextProvider >

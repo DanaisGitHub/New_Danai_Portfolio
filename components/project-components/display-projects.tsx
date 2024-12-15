@@ -15,10 +15,6 @@ export default function Projects({ children }: any) {
     const refs = useRef<HTMLDivElement>(null);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-    useEffect(()=>{
-
-    })
-
     return (
         <section ref={refs} id="projects" className="scroll-mt-28 mb-28 ">
             <SectionHeading>My projects</SectionHeading>
