@@ -1,0 +1,154 @@
+/* General Styles for Markdown Content */
+.markdown-content {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding:0
+}
+
+/* Light/Dark Mode Variables */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --link-color: #1e90ff;
+  --blockquote-bg: #1e293b;
+  --blockquote-border: #4f8ef7;
+}
+
+/* Apply Variables to Body */
+body {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Headings */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--heading-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.markdown-content h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--link-color);
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.75rem;
+}
+
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-size: 1.5rem;
+}
+
+/* Paragraphs */
+.markdown-content p {
+  margin: 1rem 0;
+}
+
+/* Lists */
+.markdown-content ul,
+.markdown-content ol {
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.markdown-content ul li {
+  list-style: disc;
+}
+
+.markdown-content ol li {
+  list-style: decimal;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid var(--blockquote-border);
+  background-color: var(--blockquote-bg);
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Links */
+.markdown-content a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Preformatted Text and Code Blocks */
+.markdown-content pre {
+  background-color: #2d2d2d;
+  color: #ff2525;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  counter-reset: line;
+}
+
+/* Code Block Line Numbers */
+.markdown-content code>[data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+.markdown-content [data-highlighted-line] {
+  background: #c8c8ff1a;
+  border-left: 4px solid #0070f3;
+}
+
+.markdown-content code[data-line-numbers-max-digits="2"]>[data-line]::before {
+  width: 2rem;
+}
+
+.markdown-content code[data-line-numbers-max-digits="3"]>[data-line]::before {
+  width: 3rem;
+}
+
+.markdown-content [data-highlighted-line] {
+  background: #c8c8ff1a;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+.markdown-content [data-highlighted-chars] {
+  background-color: rgb(160, 160, 144);
+}
+
+;
