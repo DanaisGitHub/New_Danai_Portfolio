@@ -19,7 +19,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="red">
+      <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             
@@ -35,13 +35,14 @@ export default function Experience() {
               }}
               
               contentArrowStyle={{
-                borderRight: "0.55rem solid rgba(255, 0, 0, 1)",
+                borderRight: "0.55rem solid rgba(255, 0, 0, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
                 background: "rgba(50, 50, 50, 1)",
                 fontSize: "1.5rem",
+                color:"rgba(255, 0, 0, 0.8)",
               }}
             >
 
@@ -50,7 +51,6 @@ export default function Experience() {
               <p className="!mt-1 !font-normal text-white/75">
                 {item.description}
               </p>
-
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

@@ -28,12 +28,12 @@ export default function RootLayout({
       <body
         className={`${inter.className}  relative pt-28 sm:pt-36 bg-gray-900 text-gray-50 text-opacity-90 `}
       >
-        <StarsBackground className="-z-50" />
-        <ShootingStars className="-z-50" />
+        <StarsBackground className="-z-50" starDensity={0.00095}/>
+        <ShootingStars className="-z-50" minDelay={500} maxDelay={2000}/>
 
 
-        <div className=" absolute top-[-6rem] right-[11rem] max-w-screen-xl -z-50 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-[#94626382]"></div>
-        <div className=" absolute top-[-1rem] left-[-35rem] max-w-screen-xl -z-50 h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-[#676394aa]"></div>
+        <div className=" absolute top-[-6rem] right-[11rem] max-w-screen-xl -z-[51] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] bg-[#94626382]"></div>
+        <div className=" absolute top-[-1rem] left-[-35rem] max-w-screen-xl -z-[51] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-[#676394aa]"></div>
         
         <ThemeContextProvider>
           <ActiveSectionContextProvider >
