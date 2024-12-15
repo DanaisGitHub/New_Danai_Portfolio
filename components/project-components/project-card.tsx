@@ -20,6 +20,7 @@ export default function ProjectCard({ title, description, labels, imageUrl, slug
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  console.log(imageUrl)
 
   return (
     <motion.div
@@ -31,7 +32,7 @@ export default function ProjectCard({ title, description, labels, imageUrl, slug
       className="group mb-3 sm:mb-8 last:mb-0"
     >
 
-      <Link href={`/project/${slug}`} replace>
+      <Link href={`/project/${slug}`}>
         <BackgroundGradient className="bg-black rounded-3xl ">
           <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-3xl overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 text-white bg-white/10 hover:bg-white/20">
             <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
@@ -52,9 +53,11 @@ export default function ProjectCard({ title, description, labels, imageUrl, slug
               </ul>
             </div>
 
-            <img
-              src={imageUrl}
-              alt={`Project I worked on called ${title}`}
+            <Image
+              src={`/${slug}.webp`}
+              width={500}
+              height={500}
+              alt={`preivew_${imageUrl}.webp`}
               className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]

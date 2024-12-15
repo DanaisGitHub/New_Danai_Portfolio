@@ -6,84 +6,88 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import ImportedProfilePicture from '@/public/profile-pic.webp'
+import previewImgImport from '@/public/preview.webp'
 
 
 export const ProfilePic = ImportedProfilePicture
 
-export const aboutMeText = `Lets keep it short, I've been a developer since I can remember engeering web apps, 
-native & cross-platform apps, dashboards and everything frontend.
- My next adventure this beautful world of tech backend & data based apps,   `
+
+
+export const aboutMeText = `Lets keep it short🩳, I've been a developer since I can remember, engineering everything from web-apps to robot controllers. I am weirdly passionate about software, especially it’s problems, encountering problems and solving them is a drug💊 I cannot resist. With the advent of AI and greater software demand I aspire to be a true full stack developer, a generalist in my field. I hope that this is portrayed in my project portfolio 
+
+In my non-coding time, I gym🏋🏾, the end.  `
 
 export const links = [{
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  name: "Home",
+  hash: "#home",
+},
+{
+  name: "About",
+  hash: "#about",
+},
+{
+  name: "Projects",
+  hash: "#projects",
+},
+{
+  name: "Skills",
+  hash: "#skills",
+},
+{
+  name: "Experience",
+  hash: "#experience",
+},
+{
+  name: "Contact",
+  hash: "#contact",
+},
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Power Platform Developer",
+    location: "Manchester Uk",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Sept 2024 - Present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Computer Science BSC, First Class",
+    location: "University Of Liverpool, Liverpool, UK",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "A power platform and software developer, engineering a plethora of solutions within the Microsoft eco-space.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Sept 2021 - July 2024",
+  },
+  {
+    title: "Sales Agent",
+    location: "Carole Nash, Manchester, UK",
+    description:
+      ` A sales role which had strict KPI's to achieve and a high stress environment to achieve them in`,
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2021 - Aug 2021",
   },
 ] as const;
 
 
 export const skillsData = [
   "HTML / CSS / Tailwind",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
+  "JavaScript / TypeScript",
+  "C# / .NET",
+  "React / NEXT.js",
   "Node.js",
   "Git",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
   "Python",
-  "Django",
+  "PyTorch",
+  "Dart",
+  "Flask",
+  "Flutter",
+  "Keras",
+  "Java",
+  "WeBots",
+  "TensorFlow",
   "Framer Motion",
 ] as const;
+
+

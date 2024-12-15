@@ -44,7 +44,7 @@ export default function Intro() {
                 width="500"
                 height="500"
                 quality="95"
-                objectFit="contain"
+                objectFit="fill"
                 priority={true}
                 className=" rounded-3xl shadow-3xl -z-[1004] " />
             </MovingBorder>
@@ -72,7 +72,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="font-bold">Hello, I'm <Cover className=" bg-transparent round"> Danai Zerai </Cover>.</span> I'm a{" "}
+          <span className="font-bold">Hello, I'm  Danai Zerai.</span> I'm a{" "}
           <span className="font-bold">Software Developer</span>{" "}
           <span className="font-bold"></span> Aiming to be unreplaceable by {" "}
           <span className="font-bold">AI</span>. Or to become it{" "}

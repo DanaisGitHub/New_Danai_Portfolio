@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
         .use(rehypeAutolinkHeadings)
 
     const param = await params
-    const filePath = `content/${param.slug}.md`
+    const filePath = `content/${param.slug}/${param.slug}.md`
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent)
     const htmlContent = (await processor.process(content)).toString()
@@ -78,7 +78,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
     // read route params 
     const {slug} = await params
-    const filePath = `content/${slug}.md`
+    const filePath = `content/${slug}/${slug}.md`
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent)
     return {
