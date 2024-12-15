@@ -60,13 +60,15 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
         <TracingBeam className="px-6">
             <MaxWidthWrapper className='dark:prose-invert pb-7 '>
                 <div className='flex '>
-                    <div className='px-16 w-full '>
-                        <h1 className=" markdown-content text-center font-extrabold text-5xl max-sm:text-4xl pb-7" >
+                    <div className='max-lg:px-1 w-full '>
+                        
+                        <h1 className=" markdown-content text-center font-extrabold text-5xl max-sm:text-4xl " >
                             <Cover>{data.title}</Cover>
                         </h1>
-                        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+                        {/* <Onthispage className="markdown-content max-lg:hidden " htmlContent={htmlContent} /> */}{/* Fix styling */}
+                        <div className="markdown-content lg:text-lg md:text-md sm:text-sm " dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+                        
                     </div>
-                    {/* <Onthispage className="markdown-content container  overflow-clip" htmlContent={htmlContent} /> */}
                 </div>
             </MaxWidthWrapper>
         </TracingBeam>

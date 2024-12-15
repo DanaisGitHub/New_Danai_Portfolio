@@ -45,24 +45,24 @@ export const links = [{
 
 export const experiencesData = [
   {
-    title: "Power Platform Developer",
-    location: "Manchester Uk",
+    title: "Power Platform Developer                                                                                               ",
+    location: "Manchester Uk                                                                                               ",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "A power platform and software developer, engineering a plethora of solutions within the Microsoft eco-space.                                                                                               ",
     icon: React.createElement(CgWorkAlt),
     date: "Sept 2024 - Present",
   },
   {
-    title: "Computer Science BSC, First Class",
+    title: "Computer Science BSC, First Class                                                                                               ",
     location: "University Of Liverpool, Liverpool, UK",
     description:
-      "A power platform and software developer, engineering a plethora of solutions within the Microsoft eco-space.",
+      "",
     icon: React.createElement(LuGraduationCap),
     date: "Sept 2021 - July 2024",
   },
   {
-    title: "Sales Agent",
-    location: "Carole Nash, Manchester, UK",
+    title: "Sales Agent", 
+    location: "Carole Nash, Manchester, UK                                                                                                    ",
     description:
       ` A sales role which had strict KPI's to achieve and a high stress environment to achieve them in`,
     icon: React.createElement(CgWorkAlt),

@@ -28,15 +28,14 @@ export default function RootLayout({
       <body
         className={`${inter.className}  relative pt-28 sm:pt-36 bg-gray-900 text-gray-50 text-opacity-90 `}
       >
-        <StarsBackground className="-z-50" />
-        <ShootingStars className="-z-50" />
+        <StarsBackground className="-z-50" starDensity={0.00095} />
 
 
-        
-  
-            {children}
-            <Footer />
-            <Toaster position="top-right" />
+
+
+        {children}
+        <Footer />
+        <Toaster position="top-right" />
 
 
 
