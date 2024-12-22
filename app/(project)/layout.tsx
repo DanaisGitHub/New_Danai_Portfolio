@@ -28,17 +28,10 @@ export default function RootLayout({
       <body
         className={`${inter.className}  relative pt-28 sm:pt-36 bg-gray-900 text-gray-50 text-opacity-90 `}
       >
-        <StarsBackground className="-z-50" starDensity={0.00095} />
-
-
-
-
+        <StarsBackground className="-z-50" starDensity={0.00045} twinkleProbability={0.5} allStarsTwinkle={false} />
         {children}
         <Footer />
         <Toaster position="top-right" />
-
-
-
 
       </body>
     </html>

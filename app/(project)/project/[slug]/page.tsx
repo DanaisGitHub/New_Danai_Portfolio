@@ -9,7 +9,7 @@ import rehypeStringify from "rehype-stringify"
 import rehypeHighlight from "rehype-highlight"
 import matter from "gray-matter"
 import fs from "fs"
-import Onthispage from '@/components/Onthispage'
+import Onthispage from '@/components/md-titles'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { rehypePrettyCode } from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'

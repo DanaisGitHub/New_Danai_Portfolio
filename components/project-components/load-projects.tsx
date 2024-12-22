@@ -43,7 +43,7 @@ console.log(projects)
 
 export default function BlogList() {
   return (
-    <div className="flex flex-wrap justify-around min-w-full ">
+    <div className="flex flex-col min-w-full ">
       {projects.map((project, index) => (
         <React.Fragment key={index}>
           <ProjectCard {...project} />

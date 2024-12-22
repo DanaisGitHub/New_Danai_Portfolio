@@ -11,7 +11,7 @@ github: https://github.com/DanaisGitHub/Robot_Perception
 ### Final Result
 
 
-**Videos will be YT Links**
+[Youtube Video 😀](https://youtu.be/tYTFxwDruac)
 
 ## 🚀 Load the Pre-trained Model
 
