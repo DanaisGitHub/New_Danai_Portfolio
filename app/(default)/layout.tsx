@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${inter.className}  relative pt-28 sm:pt-36 bg-gray-900 text-gray-50 text-opacity-90 `}
       >
-        <StarsBackground className="-z-50" starDensity={0.00095}/>
+        <StarsBackground className="-z-50" starDensity={0.00065} twinkleProbability={0.7} allStarsTwinkle={false}/>
         <ShootingStars className="-z-50" minDelay={500} maxDelay={2000}/>
 
 
