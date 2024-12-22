@@ -47,6 +47,7 @@ export default function Intro() {
                   quality="95"
                   objectFit="fill"
                   priority={true}
+                  loading="eager"
                   className=" rounded-3xl shadow-3xl -z-[1004] " />
               </MovingBorder>
             </motion.div>

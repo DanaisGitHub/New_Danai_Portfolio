@@ -13,9 +13,12 @@ export const ProfilePic = ImportedProfilePicture
 
 
 
-export const aboutMeText = `Lets keep it short🩳, I've been a developer since I can remember, engineering everything from web-apps to robot controllers. I am weirdly passionate about software, especially it’s problems, encountering problems and solving them is a drug💊 I cannot resist. With the advent of AI and greater software demand I aspire to be a true full stack developer, a generalist in my field. I hope that this is portrayed in my project portfolio 
-
-In my non-coding time, I gym🏋🏾, the end.  `
+export const aboutMeText = `With over 9 years in computer science, I’ve gained technical skills through hands-on experience in
+software engineering, including developing native, cross-platform, and web applications. My goal is to
+contribute to a team of developers to create software aligned with your standards across the software
+life cycle. Alongside technical skills, my previous job and volunteering experiences have enhanced my
+pragmatism, passion, organization, and structure. I believe this combination of skills makes me a strong
+fit for your work environment, and I would be a valuable addition to the team. `
 
 export const links = [{
   name: "Home",
@@ -61,7 +64,7 @@ export const experiencesData = [
     date: "Sept 2021 - July 2024",
   },
   {
-    title: "Sales Agent", 
+    title: "Sales Agent",
     location: "Carole Nash, Manchester, UK                                                                                                    ",
     description:
       ` A sales role which had strict KPI's to achieve and a high stress environment to achieve them in`,

@@ -43,7 +43,6 @@ def apply_mask(image, mask, color, alpha=0.5):
                                   (1 - alpha) + alpha * color[c],
                                   image[:, :, c])
     return image
-
 ```
 
 Apply the given mask to the image with transparency. 🖼️
@@ -55,7 +54,6 @@ def mask_center(mask):
     m = mask.nonzero()
     x, y = np.mean(m[1]), np.mean(m[0])
     return int(x), int(y)
-
 ```
 
 Calculate the centre of the binary mask using the centroid formula. 📏
@@ -71,7 +69,6 @@ def principal_axes(mask):
     direction1 = pca.components_[0] * np.sqrt(pca.explained_variance_[0])
     direction2 = pca.components_[1] * np.sqrt(pca.explained_variance_[1])
     return center, direction1, direction2
-
 ```
 
 Compute the principal axes of the mask using PCA. 🧮
@@ -83,7 +80,6 @@ Compute the principal axes of the mask using PCA. 🧮
 ```python
 input_video_path = 'WIN_20240414_22_50_44_Pro.mp4'
 output_video_path = '000000000000.mp4'
-
 ```
 
 Specify the input and output video paths. 📁
